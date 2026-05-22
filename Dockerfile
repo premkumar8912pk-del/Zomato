@@ -1,11 +1,11 @@
-# Use Node.js 16 slim as the base image
-FROM node:16-slim
+
+FROM node:18
 
 # Set the working directory
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
